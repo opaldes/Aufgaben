@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.18)  12 JUL 2018 04:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.4.18)  12 JUL 2018 04:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -706,7 +706,7 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  4271 strings out of 492982
  63237 string characters out of 6136225
- 132781 words of memory out of 5000000
+ 132777 words of memory out of 5000000
  7777 multiletter control sequences out of 15000+600000
  9705 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -719,7 +719,7 @@ pe1/public/amsfonts/cm/cmr12.pfb><d:/texlive/2017/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmr17.pfb><d:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr8.pfb><d:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.p
 fb><d:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on TGI10.pdf (2 pages, 92841 bytes).
+Output written on TGI10.pdf (2 pages, 92324 bytes).
 PDF statistics:
  47 PDF objects out of 1000 (max. 8388607)
  33 compressed objects within 1 object stream
