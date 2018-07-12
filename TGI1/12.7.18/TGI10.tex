@@ -1,0 +1,110 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+%%% END Article customizations
+
+%%% The "real" document content comes below...
+
+\title{Brief Article}
+\author{The Author}
+%\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+
+\section{1 Zustandsautomaten aufstellen für 1 + (0 + 11)(1 + 01)*0}
+Siehe im Archiv enthaltenes Graphik findia.svg
+\section{2 Konkatenation von Sprachen}
+\subsection{a  L1 = \{0, 1, 011\} L2 = \{$\epsilon$, 0, 1, 01\}}
+L1$\bullet$L2 = \{0,1,011,00,10,0110,01,11,0111,001,101,01101\}\\
+L2$\bullet$L1 = \{0,1,00,01,01011,10,11,0111,010,011,01011\}\\
+\subsection{b L1 = \{$\epsilon$, a, ab, abb\} L2 = \{a, b, bb\}}
+L1$\bullet$L2 = \{a,b,bb,aa,ab,abb,aba,abbb,abba,abbbb\}\\
+L2$\bullet$L1 = \{a,b,bb,aa,aab,aabb,ba,bab,babb,bba,bbab,bbabb\}\\
+\subsection{c L1 = \{$\epsilon$, -, +, -+\} L2 = \{$\epsilon$, -, +, +-\}}
+L1$\bullet$L2 = \{-,+,+-,--,-+,++,++-,-+-,-++,-++-\}\\
+L2$\bullet$L1 = \{-,+,-+,--,--+,+-.++.+-+,+--,+--+\}\\
+\subsection{d L1= \{$\epsilon, a, ab,aba$\}  L2= \{$\epsilon,a,b,bab$\}}
+Die eigentlichen Symbole der aufgabe wurden der einfachheit halber auf a und b geändert.
+L1$\bullet$L2 = \{a,b,bab,aa,ab,abab,aba,abb,abbab,abaa,abab,ababab\}\\
+L2$\bullet$L1 = \{a,ab,aba,aa,aab,aaba,ba,bab,baba,babab,bababa\}\\
+ \section{Pumping Lemma}
+ \subsection{L = \{$w = 0^{i}1^{j}| i \leq 2^{j}+1$\}} 
+ Annahme L ist regulär.
+ Dann kann ich mit Pumping Lemma ein Wort xyz bilden das ein Wort der Sprache L ist. 
+ Pumpingzahl n = 3;
+ Zeichenreihe x aus L bei der der $\vert x\vert$ $\geq$ n.
+ Pumpen mit dem Wort 011 welches in der Sprache liegt.\\
+ Zerlegeung in uvw:  u=0 v=1 w=1
+Es gilt: \\ $\vert v\vert$ $\geq$ 1\\
+Es gilt: \\  $\vert uv\vert$ $\leq$ n; n = 3\\
+ 1. Versuch abpumpen von v mit v$^{0}$:
+ 01 liegt nicht in der Sprache \\
+ Da 1. Versuch fehlgeschlagen ist ist die Annahme die Sprache sei regulär falsch.
+   
+ \subsection{L = \{$w = 0^{i}1^{j}| i \neq j$\}}
+ 
+ Annahme L ist regulär.
+ Dann kann ich mit Pumping Lemma ein Wort xyz bilden das ein Wort der Sprache L ist. 
+ Pumpingzahl n = 2;
+ Damit Wort akzeptiert wird i = n und j= n+1, somit kann i niemals gleich j sein.
+ Zeichenreihe x aus L bei der der  $\vert uv\vert$ $\geq$ n mit einsetzen von n.
+ Pumpen mit dem Wort 00111 welches in der Sprache liegt.\\
+ Zerlegeung in uvw:  u=0 v=0 w=111
+Es gilt: \\  $\vert v\vert$ $\geq$ 1\\
+Es gilt: \\  $\vert uv\vert$ $\leq$ n; n = 2\\
+1. Versuch abpumpen von v mit v$^{0}$:
+0111 liegt in der Sprache \\
+2. Versuch pumpen von v mit v$^{2}$:
+000111 liegt nicht in der Sprache, da  $\vert 0\vert$ =  $\vert 1\vert$ ist. Wiederspruch im Pumping Lemma , deswegen ist L nicht Regulär.\\
+
+\end{document}
